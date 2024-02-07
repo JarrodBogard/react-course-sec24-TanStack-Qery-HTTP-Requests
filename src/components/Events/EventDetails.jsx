@@ -123,6 +123,7 @@ export default function EventDetails() {
               </>
             )}
           </div>
+
           {isErrorDeleting && (
             <ErrorBlock
               title="Failed to delete event."

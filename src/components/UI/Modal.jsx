@@ -16,8 +16,14 @@ export default function Modal({ children, onClose }) {
   }, []);
 
   return createPortal(
-    <dialog className="modal" ref={dialog} onClose={onClose}>
-      {children}
+    <dialog
+      className="modal"
+      ref={dialog}
+      onClose={onClose}
+      onClick={(e) => e.target === dialog.current && dialog.current.close()}
+      // onClick={(e) => e.target.nodeName === 'DIALOG' && dialog.current.close()}
+    >
+      <div className="modal-content-wrapper">{children}</div>
     </dialog>,
     document.getElementById("modal")
   );

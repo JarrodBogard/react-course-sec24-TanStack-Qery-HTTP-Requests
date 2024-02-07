@@ -302,7 +302,7 @@ ul {
 
 .modal {
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   position: fixed;
   top: 10vh;
   left: calc(50% - 15rem);
@@ -400,6 +400,10 @@ ul {
 
 .error-block p {
   margin: 0;
+}
+
+.modal-content-wrapper {
+  padding: 2rem;
 }
 
 .center {
